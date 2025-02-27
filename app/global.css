@@ -1,0 +1,564 @@
+* {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+/* Container */
+.form-container {
+  padding: 1rem;
+  border-top: 1px solid #ddd;
+  background-color: white;
+}
+
+/* Form */
+.form-wrapper {
+  display: flex;
+  gap: 0.5rem;
+}
+
+/* Input Field */
+.input-field {
+  flex: 1;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  outline: none;
+  transition: border 0.2s, box-shadow 0.2s;
+}
+
+.input-field:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.4);
+}
+
+/* Submit Button */
+.submit-button {
+  padding: 0.75rem;
+  background-color: #2563eb;
+  color: white;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.submit-button:hover {
+  background-color: #1e40af;
+}
+
+.submit-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.4);
+}
+
+/* SVG Icon */
+.submit-button svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+/* Container */
+.navbar {
+  background-color: darkblue;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Left Section */
+.navbar-left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Profile Picture Container */
+.profile-container {
+  background-color: white;
+  padding: 0.5rem;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Profile Text */
+.profile-text {
+  display: flex;
+  height: 2rem;
+  width: 2rem;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  color: blue;
+}
+.text-container {
+  margin-left: 2rem;
+}
+
+/* Text Section */
+.text-container h1 {
+  margin: 0;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 700;
+  color: white;
+}
+
+.text-container p {
+  margin: 0;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: lightblue;
+}
+
+/* Right Section */
+.navbar-right {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Buttons */
+.navbar-button {
+  border-radius: 50%;
+  background-color: rgb(59, 130, 235);
+  padding: 0.5rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  margin-right: 1rem;
+  color: white;
+  width: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 1.5rem;
+}
+
+.navbar-button-alt {
+  border-radius: 50%;
+  background-color: rgb(59, 130, 235);
+  padding: 0.5rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: white;
+  width: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 1.5rem;
+}
+
+.mainBody {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.main {
+  width: 100%;
+  max-width: 48rem;
+  background: white;
+  border-radius: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+  border-radius: .75rem;
+  box-shadow: 2px 2px 2px grey;
+}
+.suggestion {
+  display: flex;
+  overflow-x: auto;
+  border-bottom-width: 1px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(249 250 251/var(--tw-bg-opacity));
+  padding: .75rem;
+}
+section {
+  width: 100%;
+  -webkit-text-size-adjust: 100%;
+  tab-size: 4;
+  font-family: ui-sans-serif, system-ui, sans-serif, Apple Color Emoji,
+    Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  font-feature-settings: normal;
+  font-variation-settings: normal;
+  line-height: inherit;
+  color: hsl(var(--foreground));
+  box-sizing: border-box;
+  border: 0 solid #e5e7eb;
+  border-color: hsl(var(--border));
+
+  height: 24rem;
+  overflow-y: auto;
+  --tw-bg-opacity: 1;
+  background-color: rgb(249 250 251/var(--tw-bg-opacity));
+  padding: 1rem;
+}
+section.populated {
+  height: 24rem;
+  flex-direction: column;
+  justify-content: flex-end;
+  overflow-y: scroll;
+}
+.starter-text {
+  padding: 0 80px;
+}
+.submit {
+  -webkit-text-size-adjust: 100%;
+  tab-size: 4;
+  font-family: ui-sans-serif, system-ui, sans-serif, Apple Color Emoji,
+    Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  font-feature-settings: normal;
+  font-variation-settings: normal;
+  -webkit-tap-highlight-color: transparent;
+  line-height: inherit;
+  color: hsl(var(--foreground));
+  box-sizing: border-box;
+  border: 0 solid #e5e7eb;
+  border-color: hsl(var(--border));
+
+  border-top-width: 1px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255/var(--tw-bg-opacity));
+  padding: 1rem;
+}
+form {
+  tab-size: 4;
+
+  --tw-bg-opacity: 1;
+  box-sizing: border-box;
+  border: 0 solid #e5e7eb;
+  border-color: hsl(var(--border));
+  display: flex;
+  gap: .5rem;
+}
+input.question-box {
+  tab-size: 4;
+  box-sizing: border-box;
+  border: 0 solid #e5e7eb;
+  border-color: hsl(var(--border));
+  font-family: inherit;
+  font-feature-settings: inherit;
+  font-variation-settings: inherit;
+  font-size: 100%;
+  font-weight: inherit;
+  line-height: inherit;
+  letter-spacing: inherit;
+  color: inherit;
+  margin: 0;
+  flex: 1 1 0%;
+  border-radius: var(--radius);
+  border-width: 1px;
+  padding: .75rem;
+}
+input[type=submit] {
+  width: 15%;
+  padding: 10px;
+  font-size: 15px;
+  color: #fff;
+  border: none;
+  background-color: #411b8d;
+}
+
+input:focus {
+  outline: none;
+}
+
+.prompt-suggestion-row {
+  width: 100%;
+  padding: .6rem;
+  border-bottom: 1px solid rgb(219, 217, 217);
+}
+.prompt-suggestion-button {
+  margin: .3rem;
+  letter-spacing: inherit;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+  border-radius: 9999px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(219 234 254/var(--tw-bg-opacity));
+  padding-left: .75rem;
+  padding-right: .75rem;
+  padding-top: .25rem;
+  padding-bottom: .25rem;
+  font-size: .86rem;
+  line-height: 1.25rem;
+  line-break: auto;
+  word-wrap: break-word;
+  white-space: normal;
+  overflow: hidden;
+  height: auto;
+  --tw-text-opacity: 1;
+  color: rgb(37 99 235/var(--tw-text-opacity));
+}
+.loader {
+  margin: 10px;
+  width: 60px;
+  aspect-ratio: 4;
+  background: no-repeat radial-gradient(circle closest-side, #383838 90%, #0000)
+      0% 50%,
+    no-repeat radial-gradient(circle closest-side, #383838 90%, #0000) 50% 50%,
+    no-repeat radial-gradient(circle closest-side, #383838 90%, #0000) 100% 50%;
+
+  background-size: calc(100%/3) 100%;
+  animation: loading 1s infinite linear;
+}
+
+@keyframes loadiing {
+  33% {
+    background-size: calc(100%/3) 0, calc(100%/3)100%, calc(100%/3) 100%;
+  }
+  50% {
+    background-size: calc(100%/3) 100%, calc(100%/3)0, calc(100%/3) 100%;
+  }
+  66% {
+    background-size: calc(100%/3)100%, calc(100%/3)100%, calc(100%/3) 0;
+  }
+}
+.bubble {
+  margin: 8px;
+  padding: 8px;
+  font-size: 15px;
+  border: none;
+  color: #383838;
+  box-shadow: #959da533 0 8px 24px;
+  width: 80%;
+  text-align: left;
+}
+.user {
+  max-width: 100%;
+  margin-bottom: 1rem;
+  display: flex;
+
+  display: flex;
+  justify-content: flex-start;
+}
+
+.bubble {
+  margin: 12px;
+  padding: 16px;
+  font-size: 15px;
+  border: none;
+  color: #383838;
+  box-shadow: rgba(149, 157, 165, 0.2) 0 8px 24px;
+  max-width: 80%;
+  width: fit-content;
+  text-align: left;
+  animation: fadeIn 0.3s ease-in;
+}
+
+.assistant {
+  max-width: 100%;
+  margin-bottom: 1rem;
+  display: flex;
+
+  display: flex;
+  justify-content: flex-end;
+}
+
+.loader {
+  margin: 10px;
+  width: 60px;
+  aspect-ratio: 4;
+  --c: #383838;
+  background: radial-gradient(circle closest-side, var(--c) 90%, #0000) 0% 50%,
+    radial-gradient(circle closest-side, var(--c) 90%, #0000) 50% 50%,
+    radial-gradient(circle closest-side, var(--c) 90%, #0000) 100% 50%;
+  background-size: calc(100%/3) 100%;
+  background-repeat: no-repeat;
+  animation: loading 1s infinite linear;
+}
+
+.noMessage {
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: flex-start;
+}
+.botMessageIcon {
+  width: 32px; /* Equivalent to w-8 */
+  height: 32px; /* Equivalent to h-8 */
+  border-radius: 50%; /* Makes it fully rounded */
+  background-color: #2563eb; /* Equivalent to bg-blue-600 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 8px; /* Equivalent to mr-2 */
+}
+.bot {
+  width: 16px; /* Equivalent to w-4 */
+  height: 16px; /* Equivalent to h-4 */
+  color: white; /* Equivalent to text-white */
+}
+.noMessageBox {
+  max-width: 80%;
+  padding: 12px;
+  border-radius: 8px;
+  background-color: #e5e7eb; /* Equivalent to Tailwind's bg-gray-200 */
+  color: #374151; /* Equivalent to Tailwind's text-gray-800 */
+  border-bottom-left-radius: 0; /* Makes the bottom-left corner square */
+  white-space: pre-wrap; /* Ensures text formatting is preserved */
+}
+.botMessage {
+  max-width: 80%;
+  padding: 12px;
+  border-radius: 8px;
+  background-color: #374151; /* Equivalent to Tailwind's bg-gray-200 */
+  color: #e5e7eb; /* Equivalent to Tailwind's text-gray-800 */
+  border-bottom-left-radius: 0; /* Makes the bottom-left corner square */
+  white-space: pre-wrap; /* Ensures text formatting is preserved */
+}
+.userMessage {
+  max-width: 80%;
+  padding: 12px;
+  border-radius: 8px;
+  background-color: #15233f; /* Equivalent to Tailwind's bg-gray-200 */
+  color: #dae0e9; /* Equivalent to Tailwind's text-gray-800 */
+  border-bottom-right-radius: 0; /* Makes the bottom-left corner square */
+  white-space: pre-wrap; /* Ensures text formatting is preserved */
+}
+.noMainMessage {
+  -webkit-text-size-adjust: 100%;
+  tab-size: 4;
+  font-family: ui-sans-serif, system-ui, sans-serif, Apple Color Emoji,
+    Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  font-feature-settings: normal;
+  font-variation-settings: normal;
+  line-height: inherit;
+  color: rgb(31 41 55/var(--tw-text-opacity));
+  box-sizing: border-box;
+  border: 0 solid #e5e7eb;
+  border-color: hsl(var(--border));
+  margin: 0;
+  white-space: pre-wrap;
+}
+@keyframes loading {
+  33% {
+    background-size: calc(100%/3) 0%, calc(100%/3) 100%, calc(100%/3) 100%;
+  }
+  50% {
+    background-size: calc(100%/3) 100%, calc(100%/3) 0%, calc(100%/3) 100%;
+  }
+  66% {
+    background-size: calc(100%/3) 100%, calc(100%/3) 100%, calc(100%/3) 0%;
+  }
+}
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Landing Page Styling */
+.landing-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(to right, #007bff, #0056b3);
+  color: white;
+  text-align: center;
+}
+
+.landing-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.landing-subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.start-button {
+  background-color: white;
+  color: #007bff;
+  font-size: 1.2rem;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+}
+
+.start-button:hover {
+  background-color: #0056b3;
+  color: white;
+}
+
+@media print {
+  * {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+
+  body {
+    background: white !important;
+    color: black !important;
+  }
+
+  .navbar,
+  .form-container,
+  .submit {
+    display: none !important; /* Hide navigation, forms, and inputs */
+  }
+
+  .main {
+    width: 100%;
+    max-width: 100%;
+    border: none;
+    box-shadow: none;
+    padding: 1rem;
+  }
+
+  section {
+    height: auto !important;
+    overflow: visible !important;
+    background: white !important;
+    padding: 1rem !important;
+  }
+
+  .bubble {
+    width: 100%;
+    padding: 10px;
+    font-size: 15px;
+    box-shadow: none;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+  }
+
+  .user {
+    text-align: right;
+    color: blue;
+  }
+
+  .assistant {
+    text-align: left;
+    color: black;
+  }
+
+  /* Prevent chat bubbles from breaking across pages */
+  .bubble {
+    page-break-inside: avoid;
+  }
+}
+
+.print-button {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+.print-button:hover {
+  background: #1d4ed8;
+}
